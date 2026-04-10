@@ -396,7 +396,7 @@ export default function Page() {
         const spotsFill = document.querySelector('.spots-fill') as HTMLElement;
         if (spotsFill) spotsFill.style.width = '70%';
         const spotsLabel = document.querySelector('.spots-label');
-        if (spotsLabel) spotsLabel.innerHTML = '<strong>68 / 100</strong> founding spots taken';
+        if (spotsLabel) spotsLabel.innerHTML = '68 / 100 founding spots taken';
       });
     }
 
@@ -449,7 +449,7 @@ export default function Page() {
             <div className="hero-eyebrow"><span className="eyebrow-dot"></span>67 of 100 founding spots remaining</div>
             <h1>Your partners stay<br /><em>informed, engaged,</em><br />and selling.</h1>
             <p className="hero-sub">Partner Brief is a done-for-you partner communications service. We write personalized newsletters and audio briefings for every partner, every week, so you stay top of mind without lifting a finger.</p>
-            <p className="hero-proof">Designed for B2B teams with channel, reseller, and agency partners</p>
+            <p className="hero-proof">No manual updates. No partners going dark.</p>
             <div className="waitlist-form">
               <input className="waitlist-input" id="hero-email" type="email" placeholder="your@company.com" />
               <button className="waitlist-btn" id="hero-btn">Claim your founding rate</button>
@@ -525,12 +525,12 @@ export default function Page() {
         <div className="section">
           <div className="section-eyebrow">The problem</div>
           <h2 className="section-title">Great partner programs still lose deals<br />because of <em>poor communication.</em></h2>
-          <p className="section-sub">Most partner programs don&#39;t fail because the relationships are bad. They fail because you go quiet. Partners drift, deals stall, and by the time you notice it&#39;s already next quarter. The fix isn&#39;t another tool. It&#39;s consistent, relevant communication that actually gets read.</p>
+          <p className="section-sub">Most partner programs do not fail because the relationships are bad. They fail because you go quiet. Partners drift, deals stall, and by the time you notice it is already next quarter. The fix is not another tool. It is consistent, relevant communication that actually gets read.</p>
           <div className="problem-grid">
             <div className="problem-card fade-up"><div className="problem-num">01</div><div className="problem-title">Partners ignore generic comms</div><div className="problem-desc">Blast emails with no context, no relevance, no urgency. Partners have learned to tune them out entirely. Your updates never land.</div></div>
-            <div className="problem-card fade-up" style={{transitionDelay:'.1s'}}><div className="problem-num">02</div><div className="problem-title">PRMs are expensive graveyards</div><div className="problem-desc">Six-figure platforms that only your internal team logs into. Partners don&#39;t want another portal. They want answers in their inbox, fast.</div></div>
-            <div className="problem-card fade-up" style={{transitionDelay:'.2s'}}><div className="problem-num">03</div><div className="problem-title">Manual updates don&#39;t scale</div><div className="problem-desc">Partner managers juggling dozens of relationships, manually writing updates each week. It is unsustainable, and it shows in engagement rates.</div></div>
-            <div className="problem-card fade-up" style={{transitionDelay:'.3s'}}><div className="problem-num">04</div><div className="problem-title">Partners don&#39;t know what to sell</div><div className="problem-desc">Product launches, updated decks, win stories, competitive intel. It lives in five tools your partners will never access. Deals die because of it.</div></div>
+            <div className="problem-card fade-up" style={{transitionDelay:'.1s'}}><div className="problem-num">02</div><div className="problem-title">PRMs are expensive graveyards</div><div className="problem-desc">Six-figure platforms that only your internal team logs into. Partners do not want another portal. They want answers in their inbox, fast.</div></div>
+            <div className="problem-card fade-up" style={{transitionDelay:'.2s'}}><div className="problem-num">03</div><div className="problem-title">Manual updates do not scale</div><div className="problem-desc">Partner managers juggling dozens of relationships, manually writing updates each week. It is unsustainable, and it shows in engagement rates.</div></div>
+            <div className="problem-card fade-up" style={{transitionDelay:'.3s'}}><div className="problem-num">04</div><div className="problem-title">Partners do not know what to sell</div><div className="problem-desc">Product launches, updated decks, win stories, competitive intel. It lives in five tools your partners will never access. Deals die because of it.</div></div>
             <div className="problem-card fade-up" style={{transitionDelay:'.4s'}}><div className="problem-num">05</div><div className="problem-title">You are not top of mind</div><div className="problem-desc">Half the value of a partner relationship is staying relevant. When you go quiet, partners fill the gap with vendors who communicate better than you do.</div></div>
             <div className="problem-card fade-up" style={{transitionDelay:'.5s'}}><div className="problem-num">06</div><div className="problem-title">No context from internal systems</div><div className="problem-desc">Your best partner intelligence lives in Slack threads, call recordings, and CRM notes. None of it ever makes it into a partner-facing communication.</div></div>
           </div>
@@ -761,7 +761,7 @@ export default function Page() {
               <div className="research-list">
                 <div className="research-item fade-up">
                   <div className="research-item-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 13l4-4 2.5 2.5 6-7" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-                  <div className="research-item-text"><div className="research-item-name">Analyst Reports</div><div className="research-item-desc">Gartner, Forrester, IDC. Surfaced and summarized by category relevance for each partner&#39;s market</div></div>
+                  <div className="research-item-text"><div className="research-item-name">Analyst Reports</div><div className="research-item-desc">Gartner, Forrester, IDC. Surfaced and summarized by category relevance for each partner market</div></div>
                   <div className="research-badge">Auto</div>
                 </div>
                 <div className="research-item fade-up" style={{transitionDelay:'.05s'}}>
@@ -857,7 +857,7 @@ export default function Page() {
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-8" stroke="#0b7a4e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </div>
             <div className="security-footer-text">
-              <strong>You approve every briefing.</strong> Every briefing goes through your approval before it reaches a single partner inbox. You stay in full control of what gets sent.
+              Every briefing goes through your approval before it reaches a single partner inbox. You stay in full control of what gets sent.
             </div>
           </div>
         </div>
@@ -899,6 +899,7 @@ export default function Page() {
                 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Audio companion briefing for every partner</li>
                 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Dedicated account manager</li>
                 <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Engagement reporting</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Fully automated, nothing to upload or manage</li>
               </ul>
               <button className="pricing-btn" data-tier="Growth">Join waitlist</button>
               <div style={{marginTop:'14px',fontSize:'12px',color:'var(--slate-light)',textAlign:'center',lineHeight:'1.5'}}>Setup call included. No long-term contract required.</div>
@@ -916,10 +917,10 @@ export default function Page() {
             <h2 className="section-title">Be first. Get it<br /><em>free. Lock it in.</em></h2>
             <p className="section-sub">We are onboarding our first 100 customers as design partners. Free beta access, real influence over the product, and a lifetime discount locked in forever.</p>
             <div className="perks">
-              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text"><strong>Free beta access</strong>: get in before we go live and shape the product</div></div>
-              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text"><strong>Lifetime early-adopter pricing</strong>: deeply discounted, locked in forever</div></div>
-              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text"><strong>Direct access to the founding team</strong>: your use case, built in</div></div>
-              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text"><strong>Priority onboarding</strong>: white-glove integration setup</div></div>
+              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text">Free beta access: get in before we go live and shape the product</div></div>
+              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text">Lifetime early-adopter pricing: deeply discounted, locked in forever</div></div>
+              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text">Direct access to the founding team: your use case, built in</div></div>
+              <div className="perk"><div className="perk-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div><div className="perk-text">Priority onboarding: white-glove integration setup</div></div>
             </div>
           </div>
           <div className="waitlist-card">
@@ -930,7 +931,7 @@ export default function Page() {
             <h3>Claim your founding rate before it is gone.</h3>
             <p>Founding rates are locked in at signup and never increase. First 100 only.</p>
             <div className="spots-bar"><div className="spots-fill"></div></div>
-            <div className="spots-label"><strong>67 / 100</strong> founding spots taken</div>
+            <div className="spots-label">67 / 100 founding spots taken</div>
             <input type="hidden" id="waitlist-tier" value="" />
             <input className="card-input" id="waitlist-name" type="text" placeholder="Your name" />
             <input className="card-input" id="waitlist-email" type="email" placeholder="Work email" />

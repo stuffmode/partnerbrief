@@ -150,7 +150,7 @@ const cssString = `
 
     /* INTEGRATIONS */
     .integrations-section { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .integrations-inner { max-width: 1280px; margin: 0 auto; padding: 80px 48px; }
+    .integrations-inner { max-width: 1280px; margin: 0 auto; padding: 100px 48px; }
     .integrations-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 56px; align-items: start; }
     .integrations-col-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
     .research-list { display: flex; flex-direction: column; gap: 10px; }
@@ -185,7 +185,7 @@ const cssString = `
 
     /* QUOTE */
     .quote-section { background: #fff; border-top: 1px solid var(--border); }
-    .quote-inner { max-width: 900px; margin: 0 auto; padding: 80px 48px; text-align: center; }
+    .quote-inner { max-width: 900px; margin: 0 auto; padding: 100px 48px; text-align: center; }
     .quote-mark { font-family: 'Playfair Display', serif; font-size: 80px; color: var(--border); line-height: 0.5; margin-bottom: 32px; display: block; }
     .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(20px,2.5vw,30px); font-style: italic; line-height: 1.5; color: var(--navy); margin-bottom: 32px; }
     .quote-author { font-size: 14px; color: var(--slate); font-weight: 500; }
@@ -295,6 +295,16 @@ const cssString = `
     .mockui-textarea::placeholder { color: #aab; }
     .mockui-generate-btn { width: 100%; padding: 12px; background: var(--blue-accent); color: #fff; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; cursor: default; }
     .mockui-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 10px; }
+    .mockui-steps { display: flex; flex-direction: column; gap: 0; position: relative; padding: 4px 0 0; }
+    .mockui-step { display: flex; gap: 16px; align-items: flex-start; position: relative; padding-bottom: 28px; }
+    .mockui-step:last-child { padding-bottom: 0; }
+    .mockui-step-line { position: absolute; left: 15px; top: 32px; bottom: 0; width: 0; border-left: 1.5px dashed var(--border); }
+    .mockui-step:last-child .mockui-step-line { display: none; }
+    .mockui-step-num { width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: #fff; font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; }
+    .mockui-step-content { flex: 1; padding-top: 4px; }
+    .mockui-step-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+    .mockui-step-desc { font-size: 13px; color: var(--slate); line-height: 1.5; }
+    .mockui-input-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
     .mockui-preview { margin-top: 20px; }
     .mockui-preview-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 12px; }
     .mockui-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -438,7 +448,7 @@ export default function Page() {
           <div className="hero-left">
             <div className="hero-eyebrow"><span className="eyebrow-dot"></span>67 of 100 founding spots remaining</div>
             <h1>Your partners stay<br /><em>informed, engaged,</em><br />and selling.</h1>
-            <p className="hero-sub">Partner Brief turns your notes, calls, and data into personalized partner newsletters and audio briefings. Delivered automatically. Read every time.</p>
+            <p className="hero-sub">Partner Brief is a done-for-you partner communications service. We write personalized newsletters and audio briefings for every partner, every week, so you stay top of mind without lifting a finger.</p>
             <p className="hero-proof">Designed for B2B teams with channel, reseller, and agency partners</p>
             <div className="waitlist-form">
               <input className="waitlist-input" id="hero-email" type="email" placeholder="your@company.com" />
@@ -461,7 +471,7 @@ export default function Page() {
                   <div className="card-logo-dot">PB</div>
                   <div><div className="card-header-text">Acme Corp Partner Brief</div><div className="card-header-sub">West Coast Region · Weekly Digest</div></div>
                 </div>
-                <div className="card-tag">Auto-generated</div>
+                <div className="card-tag">Personalized</div>
               </div>
               <div className="card-body">
                 <div className="card-date">Week of March 8, 2026</div>
@@ -514,8 +524,8 @@ export default function Page() {
       <section>
         <div className="section">
           <div className="section-eyebrow">The problem</div>
-          <h2 className="section-title">PRMs promised the world.<br /><em>Partners ignored them.</em></h2>
-          <p className="section-sub">Partner engagement tools are expensive, clunky, and built for the vendor. The result? Partners go dark, generic emails land in spam, and your best relationships drift to competitors.</p>
+          <h2 className="section-title">Great partner programs still lose deals<br />because of <em>poor communication.</em></h2>
+          <p className="section-sub">Most partner programs don&#39;t fail because the relationships are bad. They fail because you go quiet. Partners drift, deals stall, and by the time you notice it&#39;s already next quarter. The fix isn&#39;t another tool. It&#39;s consistent, relevant communication that actually gets read.</p>
           <div className="problem-grid">
             <div className="problem-card fade-up"><div className="problem-num">01</div><div className="problem-title">Partners ignore generic comms</div><div className="problem-desc">Blast emails with no context, no relevance, no urgency. Partners have learned to tune them out entirely. Your updates never land.</div></div>
             <div className="problem-card fade-up" style={{transitionDelay:'.1s'}}><div className="problem-num">02</div><div className="problem-title">PRMs are expensive graveyards</div><div className="problem-desc">Six-figure platforms that only your internal team logs into. Partners don&#39;t want another portal. They want answers in their inbox, fast.</div></div>
@@ -534,22 +544,22 @@ export default function Page() {
           <h2 className="section-title">Stop doing it the <em>old way.</em></h2>
           <div className="oldnew-grid">
             <div className="oldnew-col-old">
-              <div className="oldnew-header">Old way</div>
+              <div className="oldnew-header">The way it works today</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Generic blast emails nobody opens</div>
-              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Chase partners for updates</div>
+              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Chasing partners for updates</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Six-figure PRM nobody logs into</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Hours writing updates manually</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Partners go dark between QBRs</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#c53030" strokeWidth="1.3"/><path d="M7 7l6 6M13 7l-6 6" stroke="#c53030" strokeWidth="1.5" strokeLinecap="round"/></svg>Broken enablement and scattered assets</div>
             </div>
             <div className="oldnew-col-new">
-              <div className="oldnew-header">New way</div>
+              <div className="oldnew-header">The Partner Brief way</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Personalized briefings by partner, region, and tier</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Partners come to you already informed</div>
-              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Delivered to their inbox automatically</div>
-              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Generated in minutes, reviewed in seconds</div>
+              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Delivered to their inbox, every week, without fail</div>
+              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Written for you, reviewed in minutes</div>
               <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Top of mind every single week</div>
-              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Relevant content surfaced at exactly the right time</div>
+              <div className="oldnew-row"><svg className="oldnew-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#0b7a4e" strokeWidth="1.3"/><path d="M6.5 10l2.5 2.5 4.5-5" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Relevant content, surfaced at exactly the right time</div>
             </div>
           </div>
         </div>
@@ -559,39 +569,39 @@ export default function Page() {
       <section className="how-bg" id="how">
         <div className="section">
           <div className="section-eyebrow">How it works</div>
-          <h2 className="section-title">Connect once.<br />Brief partners forever.</h2>
-          <p className="section-sub">Up and running in minutes. No IT required.</p>
+          <h2 className="section-title">Set it once. Your partners<br />hear from you <em>every week.</em></h2>
+          <p className="section-sub">One setup call. We learn your tone, your partners, and your goals. Then we handle everything: research, writing, personalization, and delivery. Your only job is to add notes and approve before it sends.</p>
           <div className="pipeline">
             <div className="pipeline-stage">
               <div className="pipeline-stage-label">01 · Share</div>
-              <div className="pipeline-stage-title">Share what you know</div>
+              <div className="pipeline-stage-title">Tell us what is happening</div>
               <div className="pipeline-items">
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M5 5l3.5 1.5L5 8V5z" fill="rgba(255,255,255,0.6)"/></svg></div>Upload a transcript</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Paste your notes</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M7.5 1H3a1 1 0 00-1 1v9a1 1 0 001 1h7a1 1 0 001-1V5.5L7.5 1z" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M7.5 1v4.5H12" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/></svg></div>Share a doc</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 2v2.5M6.5 8.5V11M2 6.5h2.5M8.5 6.5H11" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/><circle cx="6.5" cy="6.5" r="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/></svg></div>Connect a source</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M5 5l3.5 1.5L5 8V5z" fill="rgba(255,255,255,0.6)"/></svg></div>Share your notes</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>A call summary</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M7.5 1H3a1 1 0 00-1 1v9a1 1 0 001 1h7a1 1 0 001-1V5.5L7.5 1z" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M7.5 1v4.5H12" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/></svg></div>A product update</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 2v2.5M6.5 8.5V11M2 6.5h2.5M8.5 6.5H11" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/><circle cx="6.5" cy="6.5" r="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/></svg></div>Or nothing at all</div>
               </div>
-              <div style={{marginTop:'12px',fontSize:'13px',color:'rgba(255,255,255,0.45)',lineHeight:'1.5'}}>Whatever you have works.</div>
+              <div style={{marginTop:'12px',fontSize:'13px',color:'rgba(255,255,255,0.45)',lineHeight:'1.5'}}>We handle the research and fill in the gaps.</div>
             </div>
             <div className="pipeline-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
             <div className="pipeline-stage pipeline-middle">
-              <div className="pipeline-stage-label">02 · Generate</div>
-              <div className="pipeline-stage-title">We do the rest</div>
+              <div className="pipeline-stage-label">02 · Write</div>
+              <div className="pipeline-stage-title">We write it for you</div>
               <div className="pipeline-items">
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1l1.2 3.2H11l-2.5 1.9 1 3.1-3.5-2.4L3.5 9.2l1-3.1L2 4.2h3.3L6.5 1z" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1" strokeLinejoin="round"/></svg></div>Personalized newsletter</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1"/><path d="M5 5l3.5 1.5L5 8V5z" fill="rgba(255,255,255,0.9)"/></svg></div>Audio briefing</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Formatted and ready to send</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1l1.2 3.2H11l-2.5 1.9 1 3.1-3.5-2.4L3.5 9.2l1-3.1L2 4.2h3.3L6.5 1z" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1" strokeLinejoin="round"/></svg></div>Personalized by partner, region, and tier</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1"/><path d="M5 5l3.5 1.5L5 8V5z" fill="rgba(255,255,255,0.9)"/></svg></div>Formatted in your voice</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.9)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Ready for your review</div>
               </div>
-              <div style={{marginTop:'12px',fontSize:'13px',color:'rgba(255,255,255,0.7)',lineHeight:'1.5'}}>Partner Brief turns it into a personalized newsletter and audio briefing, formatted and ready to send.</div>
+              <div style={{marginTop:'12px',fontSize:'13px',color:'rgba(255,255,255,0.7)',lineHeight:'1.5'}}>Every briefing is personalized by partner, region, and tier, formatted in your voice, and ready for your review.</div>
             </div>
             <div className="pipeline-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M14 7l5 5-5 5" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
             <div className="pipeline-stage">
-              <div className="pipeline-stage-label">03 · Send</div>
-              <div className="pipeline-stage-title">Review and send</div>
+              <div className="pipeline-stage-label">03 · Approve</div>
+              <div className="pipeline-stage-title">Approve and send</div>
               <div className="pipeline-items">
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="rgba(255,255,255,0.6)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg></div>Approve in one click</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 3.5a1 1 0 011-1h7a1 1 0 011 1v6a1 1 0 01-1 1H3a1 1 0 01-1-1v-6z" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M2 5l4.5 3L11 5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Delivered to their inbox</div>
-                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Your format, every time</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="rgba(255,255,255,0.6)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg></div>One click to approve</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 3.5a1 1 0 011-1h7a1 1 0 011 1v6a1 1 0 01-1 1H3a1 1 0 01-1-1v-6z" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M2 5l4.5 3L11 5" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Partners get a personalized briefing</div>
+                <div className="pipeline-item"><div className="pipeline-item-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1"/><path d="M3.5 6.5h6M3.5 4h6M3.5 9h4" stroke="rgba(255,255,255,0.6)" strokeWidth="1.1" strokeLinecap="round"/></svg></div>Feels like it was written just for them</div>
               </div>
             </div>
           </div>
@@ -601,71 +611,58 @@ export default function Page() {
       {/* MOCK UI */}
       <section className="mockui-section">
         <div className="mockui-inner">
-          <div className="section-eyebrow">The platform</div>
-          <h2 className="section-title">See it in <em>action.</em></h2>
+          <div className="section-eyebrow">How we work</div>
+          <h2 className="section-title">Done for you, <em>start to finish.</em></h2>
           <div className="mockui-grid">
             {/* Screen 1: Starter flow */}
             <div className="mockui-screen fade-up">
-              <div className="mockui-titlebar">
-                <div className="mockui-dot mockui-dot-r"></div>
-                <div className="mockui-dot mockui-dot-y"></div>
-                <div className="mockui-dot mockui-dot-g"></div>
-                <div className="mockui-titlebar-text">partnerbrief.com</div>
-              </div>
               <div className="mockui-header">
-                <div className="mockui-header-title">Create a briefing in minutes</div>
-                <div className="mockui-header-sub">Starter workflow</div>
+                <div className="mockui-header-title">Getting started is simple.</div>
+                <div className="mockui-header-sub">How it works from day one.</div>
               </div>
               <div className="mockui-body">
-                <div className="mockui-layout">
-                  <div className="mockui-layout-left">
-                    <div className="mockui-upload">
-                      <div className="mockui-upload-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="4" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="4 3"/><path d="M16 11v10M12 15l4-4 4 4" stroke="var(--slate-light)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                      </div>
-                      <div className="mockui-upload-text"><strong>Drop files here</strong> or click to browse</div>
-                      <div className="mockui-filetypes">
-                        <span className="mockui-filetype"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M6 0.5H1.5A1 1 0 000.5 1.5v9a1 1 0 001 1h7a1 1 0 001-1V4L6 0.5z" stroke="var(--slate-light)" strokeWidth="0.8"/></svg>CSV</span>
-                        <span className="mockui-filetype"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M6 0.5H1.5A1 1 0 000.5 1.5v9a1 1 0 001 1h7a1 1 0 001-1V4L6 0.5z" stroke="var(--slate-light)" strokeWidth="0.8"/></svg>PDF</span>
-                        <span className="mockui-filetype"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M6 0.5H1.5A1 1 0 000.5 1.5v9a1 1 0 001 1h7a1 1 0 001-1V4L6 0.5z" stroke="var(--slate-light)" strokeWidth="0.8"/></svg>DOCX</span>
-                        <span className="mockui-filetype"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><path d="M6 0.5H1.5A1 1 0 000.5 1.5v9a1 1 0 001 1h7a1 1 0 001-1V4L6 0.5z" stroke="var(--slate-light)" strokeWidth="0.8"/></svg>Transcript</span>
-                      </div>
+                <div className="mockui-steps">
+                  <div className="mockui-step">
+                    <div className="mockui-step-num">1</div>
+                    <div className="mockui-step-content">
+                      <div className="mockui-step-title">We schedule your setup call</div>
+                      <div className="mockui-step-desc">We learn your partners, your tone, and what matters most to your program.</div>
                     </div>
-                    <div>
-                      <div className="mockui-label">Add any context or focus areas</div>
-                      <textarea className="mockui-textarea" placeholder="e.g. Focus on EMEA pipeline wins and the new product launch..." readOnly></textarea>
-                    </div>
-                    <button className="mockui-generate-btn">Generate Briefing</button>
+                    <div className="mockui-step-line"></div>
                   </div>
-                  <div>
-                    <div className="mockui-preview-label">Preview</div>
-                    <div className="mockui-mini-card">
-                      <div className="mockui-mini-card-header">
-                        <div className="mockui-mini-card-logo">PB</div>
-                        <div className="mockui-mini-card-title">Acme Corp Partner Brief</div>
-                      </div>
-                      <div className="mockui-mini-card-body">
-                        <div className="mockui-mini-card-date">Week of March 18, 2026</div>
-                        <div className="mockui-mini-card-headline">Q1 pipeline accelerates: 3 deals closed in your region</div>
-                        <div className="mockui-mini-card-snippet">Deal velocity is up 22% vs. last quarter. New product launch assets ready for your next pitch...</div>
-                      </div>
+                  <div className="mockui-step">
+                    <div className="mockui-step-num">2</div>
+                    <div className="mockui-step-content">
+                      <div className="mockui-step-title">You share what is happening</div>
+                      <div className="mockui-step-desc">A quick note, a call summary, a doc, or nothing at all. However you like to communicate.</div>
                     </div>
+                    <div className="mockui-step-line"></div>
                   </div>
+                  <div className="mockui-step">
+                    <div className="mockui-step-num">3</div>
+                    <div className="mockui-step-content">
+                      <div className="mockui-step-title">We handle everything else</div>
+                      <div className="mockui-step-desc">Research, writing, personalization, formatting. Your briefing is ready for your review.</div>
+                    </div>
+                    <div className="mockui-step-line"></div>
+                  </div>
+                </div>
+                <div className="mockui-input-chips">
+                  <div className="mockui-label" style={{width:'100%',marginBottom:'8px'}}>Ways to share context with us:</div>
+                  <span className="feature-tag">Voice note</span>
+                  <span className="feature-tag">Email forward</span>
+                  <span className="feature-tag">Doc or deck</span>
+                  <span className="feature-tag">Slack message</span>
+                  <span className="feature-tag">Call transcript</span>
                 </div>
               </div>
             </div>
 
             {/* Screen 2: Connected flow */}
             <div className="mockui-screen fade-up" style={{transitionDelay:'.15s'}}>
-              <div className="mockui-titlebar">
-                <div className="mockui-dot mockui-dot-r"></div>
-                <div className="mockui-dot mockui-dot-y"></div>
-                <div className="mockui-dot mockui-dot-g"></div>
-                <div className="mockui-titlebar-text">partnerbrief.com</div>
-              </div>
               <div className="mockui-header">
-                <div className="mockui-header-title">Fully automated for connected teams</div>
-                <div className="mockui-header-sub">Connected workflow</div>
+                <div className="mockui-header-title">Review and approve</div>
+                <div className="mockui-header-sub">Every briefing lands in your queue. Read it, tweak it if you want, and approve. That is your entire job.</div>
               </div>
               <div className="mockui-body">
                 <div className="mockui-label">Integration status</div>
@@ -690,7 +687,7 @@ export default function Page() {
                   <div className="mockui-queue-item">
                     <div className="mockui-queue-info">
                       <div className="mockui-queue-name">NovaTech EMEA Digest</div>
-                      <div className="mockui-queue-sub">Generated 12 min ago · 4 sections · 1,240 words</div>
+                      <div className="mockui-queue-sub">Written 12 min ago · 4 sections · 1,240 words</div>
                     </div>
                     <div className="mockui-queue-actions">
                       <button className="mockui-btn-approve">Approve</button>
@@ -727,8 +724,8 @@ export default function Page() {
             <div className="feature-card fade-up">
               <div className="feature-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#fff" strokeWidth="1.5"/><path d="M8.5 8l5 3-5 3V8z" fill="#fff"/></svg></div>
               <div className="feature-title">Audio briefings partners actually listen to</div>
-              <div className="feature-desc">Not everyone reads. Partner Brief generates a polished 3 to 5 minute audio companion to every newsletter, perfect for partners on the road, between calls, or short on time.</div>
-              <div className="feature-tags"><span className="feature-tag">Auto-generated</span><span className="feature-tag">3 to 5 min</span><span className="feature-tag">Mobile-first</span></div>
+              <div className="feature-desc">Not everyone reads. We create a polished 3 to 5 minute audio companion to every newsletter, perfect for partners on the road, between calls, or short on time.</div>
+              <div className="feature-tags"><span className="feature-tag">Written for you</span><span className="feature-tag">3 to 5 min</span><span className="feature-tag">Mobile-first</span></div>
             </div>
             <div className="feature-card fade-up" style={{transitionDelay:'.1s'}}>
               <div className="feature-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#fff" strokeWidth="1.5"/><path d="M11 3c0 0-4 3.6-4 8s4 8 4 8M11 3c0 0 4 3.6 4 8s-4 8-4 8M3 11h16" stroke="#fff" strokeWidth="1.5"/></svg></div>
@@ -755,12 +752,12 @@ export default function Page() {
       {/* INTEGRATIONS */}
       <section className="integrations-section" id="integrations">
         <div className="integrations-inner">
-          <div className="section-eyebrow">Sources and integrations</div>
-          <h2 className="section-title">First-party data meets<br /><em>real-world market intelligence.</em></h2>
-          <p className="section-sub">Partner Brief pulls from inside your organization and outside it, weaving together internal context and live market signals into one coherent briefing, automatically.</p>
+          <div className="section-eyebrow">What we work with</div>
+          <h2 className="section-title">We connect to your tools and do<br />the <em>research for you.</em></h2>
+          <p className="section-sub">Share access to the tools you already use. We pull in what is relevant, layer in market research, and build every briefing from real context.</p>
           <div className="integrations-layout">
             <div>
-              <div className="integrations-col-label">External research and market signals</div>
+              <div className="integrations-col-label">Research we do for you</div>
               <div className="research-list">
                 <div className="research-item fade-up">
                   <div className="research-item-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 13l4-4 2.5 2.5 6-7" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
@@ -790,7 +787,7 @@ export default function Page() {
               </div>
             </div>
             <div>
-              <div className="integrations-col-label">Internal tools and systems</div>
+              <div className="integrations-col-label">Tools we connect to</div>
               <div className="integrations-grid">
                 <div className="integration-item"><div className="integration-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#718096" strokeWidth="1.1"/><path d="M3.5 7h7M3.5 4.5h7M3.5 9.5h4.5" stroke="#718096" strokeWidth="1.1" strokeLinecap="round"/></svg></div><div><div className="integration-name">Slack</div><div className="integration-type">Messaging</div></div></div>
                 <div className="integration-item"><div className="integration-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="5" r="2.5" stroke="#718096" strokeWidth="1.1"/><path d="M2 12.5c0-2.2 2.2-4 5-4s5 1.8 5 4" stroke="#718096" strokeWidth="1.1" strokeLinecap="round"/></svg></div><div><div className="integration-name">HubSpot</div><div className="integration-type">CRM</div></div></div>
@@ -803,7 +800,7 @@ export default function Page() {
                 <div className="integration-item"><div className="integration-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" stroke="#718096" strokeWidth="1.1"/><path d="M4 7h6M7 4v6" stroke="#718096" strokeWidth="1.1" strokeLinecap="round"/></svg></div><div><div className="integration-name">MS Teams</div><div className="integration-type">Messaging</div></div></div>
                 <div className="integration-item"><div className="integration-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 11l3-4 2.5 2 3-4.5 2.5 4H2z" stroke="#718096" strokeWidth="1.1" strokeLinejoin="round"/></svg></div><div><div className="integration-name">Clari</div><div className="integration-type">Revenue intel</div></div></div>
                 <div className="integration-item"><div className="integration-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8 1H4a1 1 0 00-1 1v10a1 1 0 001 1h6a1 1 0 001-1V5L8 1z" stroke="#718096" strokeWidth="1.1"/><path d="M8 1v4h4" stroke="#718096" strokeWidth="1.1"/><path d="M4.5 8.5h5M4.5 10.5h3" stroke="#718096" strokeWidth="1.1" strokeLinecap="round"/></svg></div><div><div className="integration-name">SharePoint</div><div className="integration-type">Assets</div></div></div>
-                <div className="integration-more">+ more integrations coming</div>
+                <div className="integration-more">+ more tools supported, ask us</div>
               </div>
             </div>
           </div>
@@ -823,8 +820,8 @@ export default function Page() {
       <section className="security-section" id="security">
         <div className="security-inner">
           <div className="section-eyebrow">Security and trust</div>
-          <h2 className="section-title">Built for enterprise data.<br /><em>No compromises.</em></h2>
-          <p className="section-sub">Your internal data is your most valuable asset. Partner Brief is built from the ground up with strict data governance. Your information is never used to train AI models, never shared, and always yours to delete.</p>
+          <h2 className="section-title">Your data is handled<br />with <em>care.</em></h2>
+          <p className="section-sub">We take data handling seriously. Everything you share with us is encrypted, never shared, and yours to delete at any time. We do not use your content for anything beyond creating your briefings.</p>
           <div className="security-grid">
             <div className="security-card fade-up">
               <div className="security-card-icon">
@@ -837,22 +834,22 @@ export default function Page() {
               <div className="security-card-icon">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="#fff" strokeWidth="1.5"/><path d="M7 11h8M11 7v8" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/><path d="M8 8l6 6M14 8l-6 6" stroke="#fff" strokeWidth="0" strokeLinecap="round"/><path d="M11 7l-1.5 4H6l3 2.2-1.2 3.8L11 14.5l3.2 2.5-1.2-3.8 3-2.2H12.5L11 7z" stroke="#fff" strokeWidth="0"/><path d="M8 14c0-1.66 1.34-3 3-3s3 1.34 3 3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/><path d="M11 8v3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/></svg>
               </div>
-              <div className="security-card-title">Your data never trains AI</div>
-              <div className="security-card-desc">We use AI to generate your briefings, but your proprietary data is never fed back into model training. What is yours stays yours, full stop.</div>
+              <div className="security-card-title">Your data is never shared or resold</div>
+              <div className="security-card-desc">Your proprietary data is never shared with other customers or sold to third parties. What is yours stays yours, full stop.</div>
             </div>
             <div className="security-card fade-up" style={{transitionDelay:'.2s'}}>
               <div className="security-card-icon">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="9" width="16" height="11" rx="2" stroke="#fff" strokeWidth="1.5"/><path d="M7 9V7a4 4 0 018 0v2" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/><circle cx="11" cy="15" r="1.5" fill="#fff"/></svg>
               </div>
-              <div className="security-card-title">Used only for your output</div>
-              <div className="security-card-desc">Your internal context is processed solely to generate your briefings. It is never sold, shared with other customers, or used for any purpose beyond creating your content.</div>
+              <div className="security-card-title">Used only to create your briefings</div>
+              <div className="security-card-desc">Your internal context is processed solely to create your briefings. It is never used for any purpose beyond delivering your content.</div>
             </div>
             <div className="security-card fade-up" style={{transitionDelay:'.3s'}}>
               <div className="security-card-icon">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><polyline points="3,6 3,3 21,3 21,6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><line x1="12" y1="3" x2="12" y2="21" stroke="#fff" strokeWidth="0"/><path d="M11 3v18" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/><path d="M7 8l-4 4 4 4M15 8l4 4-4 4" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <div className="security-card-title">Right to delete, always</div>
-              <div className="security-card-desc">Request deletion of your data at any time: source connections, generated content, and all associated records. Actioned within 30 days, no questions asked.</div>
+              <div className="security-card-desc">Request deletion of your data at any time: source connections, briefing content, and all associated records. Actioned within 30 days, no questions asked.</div>
             </div>
           </div>
           <div className="security-footer fade-up">
@@ -860,7 +857,7 @@ export default function Page() {
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-8" stroke="#0b7a4e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </div>
             <div className="security-footer-text">
-              <strong>Human review before every send.</strong> Every Partner Brief goes through a human approval step before it reaches a single partner inbox. You stay in control of what goes out. What gets sent is always your call.
+              <strong>You approve every briefing.</strong> Every briefing goes through your approval before it reaches a single partner inbox. You stay in full control of what gets sent.
             </div>
           </div>
         </div>
@@ -874,33 +871,40 @@ export default function Page() {
           <p className="section-sub" style={{marginBottom:'48px'}}>First 100 founding members only. 67 spots remaining.</p>
           <div className="pricing-grid">
             <div className="pricing-card fade-up">
-              <div className="pricing-tier">Starter</div>
-              <div className="pricing-price"><span className="pricing-original">$149/mo</span>$49<span>/month</span></div>
+              <div className="pricing-tier">Essentials</div>
+              <div className="pricing-price"><span className="pricing-original">$499/mo</span>$149<span>/month</span></div>
+              <div style={{fontSize:'13px',color:'var(--slate-light)',lineHeight:'1.5',marginTop:'4px'}}>Up to 15 partners, cancel anytime</div>
+              <div style={{fontSize:'13px',color:'var(--slate-light)',lineHeight:'1.5',marginBottom:'24px'}}>Includes your setup call and onboarding.</div>
+              <div style={{height:'1px',background:'var(--border)',marginBottom:'24px'}}></div>
               <ul className="pricing-features">
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Upload CSV, docs, or call transcripts</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>AI generates personalized newsletters</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Send to all partners in one click</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Up to 3 integrations</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Up to 50 partners</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Weekly personalized briefing for every partner</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>You share context, we research and write everything</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Personalized by partner, region, and tier</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>You approve before anything sends</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Email delivery included</li>
               </ul>
-              <button className="pricing-btn" data-tier="Starter">Join waitlist</button>
+              <button className="pricing-btn" data-tier="Essentials">Join waitlist</button>
+              <div style={{marginTop:'14px',fontSize:'12px',color:'var(--slate-light)',textAlign:'center',lineHeight:'1.5'}}>Setup call included. No long-term contract required.</div>
             </div>
             <div className="pricing-card popular fade-up" style={{transitionDelay:'.1s'}}>
               <div className="pricing-popular-badge">Most Popular</div>
-              <div className="pricing-tier">Connected</div>
-              <div className="pricing-price"><span className="pricing-original">$599/mo</span>$199<span>/month</span></div>
+              <div className="pricing-tier">Growth</div>
+              <div className="pricing-price"><span className="pricing-original">$1,499/mo</span>$399<span>/month</span></div>
+              <div style={{fontSize:'13px',color:'var(--slate-light)',lineHeight:'1.5',marginTop:'4px'}}>Up to 50 partners, cancel anytime</div>
+              <div style={{fontSize:'13px',color:'var(--slate-light)',lineHeight:'1.5',marginBottom:'24px'}}>Includes your setup call and onboarding.</div>
+              <div style={{height:'1px',background:'var(--border)',marginBottom:'24px'}}></div>
               <ul className="pricing-features">
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Write, dictate, or connect any source</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Full integrations with Slack, HubSpot, Gong, Google Drive, and more</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Fully automated, no uploads needed</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Unlimited partners</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Personalized by region, tier, and industry</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Human review before every send</li>
-                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Engagement analytics</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Everything in Essentials</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Direct connection to your CRM, Slack, Gong, and Drive</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Audio companion briefing for every partner</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Dedicated account manager</li>
+                <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5 6.5-7" stroke="#0b7a4e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Engagement reporting</li>
               </ul>
-              <button className="pricing-btn" data-tier="Connected">Join waitlist</button>
+              <button className="pricing-btn" data-tier="Growth">Join waitlist</button>
+              <div style={{marginTop:'14px',fontSize:'12px',color:'var(--slate-light)',textAlign:'center',lineHeight:'1.5'}}>Setup call included. No long-term contract required.</div>
             </div>
           </div>
+          <p style={{textAlign:'center',fontSize:'15px',color:'var(--slate)',marginTop:'32px'}}>Managing more than 50 partners? <a href="mailto:hello@partnerbrief.com" style={{color:'var(--blue-accent)',textDecoration:'none',fontWeight:500}}>Contact us</a> for Enterprise pricing.</p>
         </div>
       </section>
 
@@ -924,7 +928,7 @@ export default function Page() {
               Founding member offer
             </div>
             <h3>Claim your founding rate before it is gone.</h3>
-            <p>67 of 100 founding spots claimed. Once they are gone, this offer closes.</p>
+            <p>Founding rates are locked in at signup and never increase. First 100 only.</p>
             <div className="spots-bar"><div className="spots-fill"></div></div>
             <div className="spots-label"><strong>67 / 100</strong> founding spots taken</div>
             <input type="hidden" id="waitlist-tier" value="" />
@@ -941,7 +945,7 @@ export default function Page() {
             <p style={{fontSize:'13px',color:'var(--success)',fontWeight:500,marginBottom:'10px',marginTop:'4px'}}>Your founding price is locked in the moment you sign up.</p>
             <button className="card-btn" id="waitlist-btn">Claim my founding spot</button>
             <div className="success-msg" id="waitlist-success">You are in. We will be in touch within 48 hours.</div>
-            <p className="card-fine">No credit card required. We will reach out personally within 48 hours.</p>
+            <p className="card-fine">No credit card required. We will be in touch within 48 hours to schedule your setup call.</p>
           </div>
         </div>
       </section>
